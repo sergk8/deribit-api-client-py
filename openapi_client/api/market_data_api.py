@@ -1926,7 +1926,7 @@ class MarketDataApi(object):
 
         local_var_params = locals()
 
-        all_params = ['instrument_name', 'start_timestamp', 'end_timestamp']  # noqa: E501
+        all_params = ['instrument_name', 'start_timestamp', 'end_timestamp', 'resolution']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1964,6 +1964,8 @@ class MarketDataApi(object):
             query_params.append(('start_timestamp', local_var_params['start_timestamp']))  # noqa: E501
         if 'end_timestamp' in local_var_params:
             query_params.append(('end_timestamp', local_var_params['end_timestamp']))  # noqa: E501
+        if 'resolution' in local_var_params:
+            query_params.append(('resolution', local_var_params['resolution']))  # noqa: E501
 
         header_params = {}
 
